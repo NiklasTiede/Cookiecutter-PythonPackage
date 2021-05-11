@@ -43,7 +43,7 @@ def test_command_line_interface():
     help_result = runner.invoke(cli.main, ['--help'])
     assert help_result.exit_code == 0
     assert '--help  Show this message and exit.' in help_result.output
-{%- endif %}
+
 {%- else %}
 
 
@@ -70,4 +70,4 @@ class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
         assert help_result.exit_code == 0
         assert '--help  Show this message and exit.' in help_result.output
 {%- endif %}
-{%- endif %}
+
