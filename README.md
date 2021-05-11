@@ -13,6 +13,7 @@ So what are the ingredients of this cookiecutter template?
 - setup.cfg to configure linting/testing tools
 - Description for PyPI generator (repo does not show pics)
 - github workflows for testing/codecoverage and deployments (PyPI or Anaconda)
--
 
-
+Big parts of this cookiecutter are based on
+- [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
+- [template-python](https://github.com/jacebrowning/template-python)
