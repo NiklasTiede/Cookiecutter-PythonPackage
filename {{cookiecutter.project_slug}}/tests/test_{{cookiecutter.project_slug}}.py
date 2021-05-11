@@ -44,7 +44,7 @@ def test_command_line_interface():
     assert help_result.exit_code == 0
     assert '--help  Show this message and exit.' in help_result.output
 {%- endif %}
-{%- else %}
+
 
 
 class Test{{ cookiecutter.project_slug|title }}(unittest.TestCase):
