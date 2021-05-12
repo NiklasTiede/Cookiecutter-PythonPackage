@@ -1,18 +1,25 @@
-# cookiecutter-NiklasPyPackage
+# Cookiecutter Template for Python Packages
 
-The way I like my projects to be  🤠
 
-So what are the ingredients of this cookiecutter template?
+What are the ingredients of this template?
 
-- pytest, tox
-- pre-commit
-- flake8, autosort
-- template for contributors
-- sphinx docs
-- makefile to store bash scripts (running tests, clean project etc)
-- setup.cfg to configure linting/testing tools
-- Description for PyPI generator (repo does not show pics)
-- github workflows for testing/codecoverage and deployments (PyPI or Anaconda)
+- local testing/linting: pre-commit and tox
+  - testing: pytest, coverage
+  - linting: flake8, pylint?
+  - configuration: setup.cfg
+- local packaging/docs release: Makefile
+  - docs: sphinx
+  - releasing: PyPI, twine, wheel
+
+Ensure that pull requests contain valid code:
+- remote testing: github actions workflow
+- remote package/docs release: github actions workflow
+
+collaboration:
+- editorconfig: configs across IDE's
+- contributing.md: tutorial for contributors
+
+---
 
 Big parts of this cookiecutter are based on
 - [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
