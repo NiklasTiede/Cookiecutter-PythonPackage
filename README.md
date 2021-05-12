@@ -1,23 +1,24 @@
 # Cookiecutter Template for Python Packages
 
-
 What are the ingredients of this template?
 
-- local testing/linting: pre-commit and tox
-  - testing: pytest, coverage
-  - linting: flake8, pylint?
-  - configuration: setup.cfg
-- local packaging/docs release: Makefile
-  - docs: sphinx
-  - releasing: PyPI, twine, wheel
+Local testing/linting is controlled by pre-commit and a Makefile
+- testing: pytest, coverage
+- linting: flake8, pylint?
+- configuration: setup.cfg
 
-Ensure that pull requests contain valid code:
-- remote testing: github actions workflow
-- remote package/docs release: github actions workflow
+Local release (package/docs) is controlled by a Makefile
+- docs: sphinx, readthedocs
+- release: PyPI, twine, wheel
 
-collaboration:
+Remote tests to ensure that pullrequests contain good code:
+- CI (testing/linting): github actions workflow
+- CD (package/docs): github actions workflow
+
+Collaboration standards:
 - editorconfig: configs across IDE's
 - contributing.md: tutorial for contributors
+- requirements.txt: consistent virtual env
 
 ---
 
