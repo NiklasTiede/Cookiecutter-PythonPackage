@@ -1,28 +1,41 @@
-{% set is_open_source = cookiecutter.open_source_license != 'Not open source' -%}
-{% for _ in cookiecutter.project_name %}={% endfor %}
-{{ cookiecutter.project_name }}
-{% for _ in cookiecutter.project_name %}={% endfor %}
 
-{% if is_open_source %}
-.. image:: https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg
-        :target: https://pypi.python.org/pypi/{{ cookiecutter.project_slug }}
+# {{ cookiecutter.project_name }}
 
-.. image:: https://img.shields.io/travis/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}.svg
-        :target: https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 
-.. image:: https://readthedocs.org/projects/{{ cookiecutter.project_slug | replace("_", "-") }}/badge/?version=latest
-        :target: https://{{ cookiecutter.project_slug | replace("_", "-") }}.readthedocs.io/en/latest/?version=latest
-        :alt: Documentation Status
-{%- endif %}
+<p align="center">
+  <img  align="center" height="130" src="docs/projectname.png" />
+   <h3 align="center">{{ cookiecutter.project_short_description }}</h3>
+<p>
 
-{% if cookiecutter.add_pyup_badge == 'y' %}
-.. image:: https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/shield.svg
-     :target: https://pyup.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/
-     :alt: Updates
-{% endif %}
-
+<p id="Badges" align="center">
+  <a alt="Platform" href="https://pypi.org/project/{{ cookiecutter.project_slug }}/">
+    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_slug }}">
+  </a>
+  <a alt="GH actions" href="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/actions">
+    <img alt="GitHub Workflow Status" src="https://img.shields.io/github/workflow/status/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/Continuos%20Integration">
+  </a>
+  <a alt="GH Release" href="https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/releases">
+    <img src="https://img.shields.io/github/v/release/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}" />
+  </a>
+  <a alt="Codecov" href="https://app.codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}">
+    <img src="https://img.shields.io/codecov/c/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}" />
+  </a>
+</p>
 
 {{ cookiecutter.project_short_description }}
 
 
+<!-- PYPI-DOCS:START -->
 
+# Example
+
+# Contents
+
+# Features
+
+# Installation
+
+# How to use {{ cookiecutter.project_name }}
+
+
+<!-- PYPI-Docs:END -->
