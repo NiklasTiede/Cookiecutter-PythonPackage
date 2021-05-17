@@ -118,13 +118,4 @@ $ pytest tests.test_{{ cookiecutter.project_slug }}
 
 # Deploying
 
-A reminder for the maintainers on how to deploy.
-Make sure all your changes are committed (including an entry in HISTORY.rst).
-Then run::
-
-```
-$ git push
-$ git push --tags
-```
-
-Github Actions will then deploy to PyPI if tests pass.
+A reminder for the maintainers on how to deploy. Make sure all your changes are committed (including an entry in CHANGELOG.md). Create the tag, release it on Github and the workflow for publishing at PyPI will kick in.

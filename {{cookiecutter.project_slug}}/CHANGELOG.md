@@ -21,5 +21,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Project released.
 
-[Unreleased]: https://github.com/NiklasTiede/Github-Trending-API/compare/v{{ cookiecutter.version }}...HEAD
-[{{ cookiecutter.version }}]: https://github.com/NiklasTiede/Github-Trending-API/releases/tag/v{{ cookiecutter.version }}
+[Unreleased]: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/compare/v{{ cookiecutter.version }}...HEAD
+[{{ cookiecutter.version }}]: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/releases/tag/v{{ cookiecutter.version }}

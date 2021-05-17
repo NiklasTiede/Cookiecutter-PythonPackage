@@ -3,7 +3,7 @@
 
 
 <p align="center">
-  <img  align="center" height="130" src="docs/projectname.png" />
+  <img  alt="{{ cookiecutter.project_slug }}" align="center" height="500" src="docs/{{ cookiecutter.project_slug }}.png" />
    <h3 align="center">{{ cookiecutter.project_short_description }}</h3>
 <p>
 
@@ -24,18 +24,35 @@
 
 {{ cookiecutter.project_short_description }}
 
-
 <!-- PYPI-DOCS:START -->
 
 # Example
 
+```python
+import {{ cookiecutter.project_slug }}
+
+
+```
+
 # Contents
+- [Features](#features)
+- [Installation](#installation)
+- [How to use {{ cookiecutter.project_slug }}](#how-to-use-{{ cookiecutter.project_slug }})
+
 
 # Features
 
 # Installation
 
-# How to use {{ cookiecutter.project_name }}
+You can install {{ cookiecutter.project_name }} with pip.
+
+```python
+$ pip install
+```
+
+# How to use {{ cookiecutter.project_slug }}
+
+
 
 
 <!-- PYPI-Docs:END -->
