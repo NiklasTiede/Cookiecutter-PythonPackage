@@ -1,7 +1,7 @@
 # !/usr/bin/env python
+import pathlib
 
 import setuptools
-import pathlib
 
 setuptools.setup(
     name='cookiecutter-NiklasPyPackage',
@@ -11,12 +11,9 @@ setuptools.setup(
     description="Cookiecutter template for a Python package Niklas' style",
     url='https://github.com/niklastiede/cookiecutter-NiklasPyPackage',
     license='MIT',
-
     packages=[],
-
     keywords=['cookiecutter', 'template', 'package'],
     python_requires='>=3.6',
-
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Console',
@@ -33,4 +30,3 @@ setuptools.setup(
         'Topic :: Software Development',
     ],
 )
-
