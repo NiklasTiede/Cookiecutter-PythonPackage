@@ -1,12 +1,12 @@
 
-
 # ------------- Installation  ------------------------------------
 .Phony: install
 
 install: clean ## install the package to the active Python's site-packages
 	python setup.py install
 
-
+dev-install: ## install the package to the active Python's site-packages for development
+	pip install -e .[dev]
 
 # ------------- Test/Lint  ------------------------------------
 
@@ -39,7 +39,7 @@ coverage: ## check code coverage quickly with the default Python
 
 .PHONY: clean clean-pyc clean-test clean-build
 
-clean: clean-pyc clean-test clean-build ## remove all build, test and Python artifacts
+clean: clean-pyc clean-test clean-build clean-coverage ## remove all build, test and Python artifacts
 
 clean-pyc: ## remove Python file artifacts
 	find . -name '*.pyc' -exec rm -f {} +
@@ -59,6 +59,9 @@ clean-build: ## remove build artifacts
 	find . -name '*.egg-info' -exec rm -fr {} +
 	find . -name '*.egg' -exec rm -f {} +
 
+clean-coverage: ## remove coverage report
+	rm -fr .coverage
+	rm -fr htmlcov
 
 
 # ------------  Documentation  -----------------------------------
