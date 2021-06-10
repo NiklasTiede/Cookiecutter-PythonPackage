@@ -20,13 +20,13 @@ def get_value(variable: str) -> Union[str, Any]:
     return p.search(content).group(1)  # type: ignore
 
 
-{% - set license_classifiers = {
+{%- set license_classifiers = {
     'MIT license': 'License :: OSI Approved :: MIT License',
     'BSD license': 'License :: OSI Approved :: BSD License',
     'ISC license': 'License :: OSI Approved :: ISC License (ISCL)',
     'Apache Software License 2.0': 'License :: OSI Approved :: Apache Software License',
     'GNU General Public License v3': 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)'
-} % }
+} %}
 
 
 setup(
@@ -50,7 +50,7 @@ setup(
     packages=find_packages(where="src"),
     python_requires='>=3.6',
     install_requires=[
-        {%- if cookiecutter.command_line_interface|lower == 'click' % }'Click>=7.0', {%- endif % }
+        {%- if cookiecutter.command_line_interface|lower == 'click' %}'Click>=7.0',{%- endif %}
     ],
     extras_require={         # pip install -e .[dev]
         "dev": [
@@ -61,19 +61,19 @@ setup(
         ],
     },
     platforms="any",
-    {%- if 'no' not in cookiecutter.command_line_interface|lower % }
+    {%- if 'no' not in cookiecutter.command_line_interface|lower %}
     entry_points={
         'console_scripts': [
             '{{ cookiecutter.project_slug }}={{ cookiecutter.project_slug }}.cli:main',
         ],
     },
-    {%- endif % }
+    {%- endif %}
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
-        {%- if cookiecutter.open_source_license in license_classifiers %}
+{%- if cookiecutter.open_source_license in license_classifiers %}
         '{{ license_classifiers[cookiecutter.open_source_license] }}',
-        {%- endif %}
+{%- endif %}
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.6',
