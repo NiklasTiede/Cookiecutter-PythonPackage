@@ -1,11 +1,11 @@
 """The setup script."""
-
 import pathlib
 import re
-from setuptools import find_packages
-from setuptools import setup
 from typing import Any
 from typing import Union
+
+from setuptools import find_packages
+from setuptools import setup
 
 
 def get_value(variable: str) -> Union[str, Any]:

@@ -1,17 +1,15 @@
-#!/usr/bin/env python
-
 """Tests for `{{ cookiecutter.project_slug }}` package."""
-
-import pytest
 import unittest
 
+import pytest
+
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
-from click.testing import CliRunner
+from click.testing import CliRunner  # noqa
 {%- endif %}
 
-from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}
+from {{ cookiecutter.project_slug }} import {{ cookiecutter.project_slug }}  # noqa
 {%- if cookiecutter.command_line_interface|lower == 'click' %}
-from {{ cookiecutter.project_slug }} import cli
+from {{ cookiecutter.project_slug }} import cli  # noqa
 {%- endif %}
 
 
