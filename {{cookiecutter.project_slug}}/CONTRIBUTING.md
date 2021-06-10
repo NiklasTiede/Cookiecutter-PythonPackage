@@ -59,13 +59,17 @@ Ready to contribute? Here's how to set up `{{ cookiecutter.project_slug }}` for 
 $ git clone git@github.com:your_name_here/{{ cookiecutter.project_slug }}.git
 ```
 
-3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development:
+
+3. Install your local copy into a virtualenv. Assuming you have `pipenv` installed, this is how you set up your fork for local development:
 
 ```
-    $ mkvirtualenv {{ cookiecutter.project_slug }}
     $ cd {{ cookiecutter.project_slug }}/
-    $ python setup.py develop
+    $ pipenv --python 3.9
+    $ pipenv shell
+    $ pip install -e .[dev]
 ```
+
+
 
 4. Create a branch for local development:
 
@@ -75,16 +79,14 @@ $ git checkout -b name-of-your-bugfix-or-feature
 
    Now you can make your changes locally.
 
-5. When you're done making changes, check that your changes pass flake8 and the
-   tests, including testing other Python versions with tox::
+5. When you're done making changes, check that your changes pass linting (pre-commit) and the
+   tests (pytest), including testing other Python versions with tox. Each of these can be called via the `Makefile`::
 
 ```
-$ flake8 {{ cookiecutter.project_slug }} tests
-$ python setup.py test or pytest
-$ tox
+$ make pre-commit
+$ make test
+$ make test-all
 ```
-
-   To get flake8 and tox, just pip install them into your virtualenv.
 
 6. Commit your changes and push your branch to GitHub::
 
@@ -101,12 +103,8 @@ $ git push origin name-of-your-bugfix-or-feature
 Before you submit a pull request, check that it meets these guidelines:
 
 1. The pull request should include tests.
-2. If the pull request adds functionality, the docs should be updated. Put
-   your new functionality into a function with a docstring, and add the
-   feature to the list in README.md.
-3. The pull request should work for Python 3.6, 3.7, 3.8 and 3.9. Check
-   https://github.com/NiklasTiede/cookiecutter-NiklasPyPackage/tree/main/.github/workflows
-   and make sure that the tests pass for all supported Python versions.
+2. If the pull request adds functionality, the docs should be updated. Put your new functionality into a function with a docstring, and add the feature to the list in README.md.
+3. The pull request should work for Python 3.6, 3.7, 3.8 and 3.9. Check https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/tree/main/.github/workflows and make sure that the tests pass for all supported Python versions.
 
 # Tips
 
@@ -114,6 +112,13 @@ To run a subset of tests:
 
 ```
 $ pytest tests.test_{{ cookiecutter.project_slug }}
+```
+
+To lint a single file or enforce type checking for a particular file.
+
+```
+$ flake8 filename
+$ mypy filename
 ```
 
 # Deploying

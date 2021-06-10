@@ -1,7 +1,7 @@
 Tutorial
 ========
 
-This guide can help you start working with tinHTTPie.
+This guide can help you start working with {{ cookiecutter.project_name }}.
 
 Fundamentals
 ------------

@@ -7,7 +7,7 @@
    <h3 align="center">{{ cookiecutter.project_short_description }}</h3>
 <p>
 
-<p id="Badges" align="center">
+<!-- <p id="Badges" align="center">
   <a alt="Platform" href="https://pypi.org/project/{{ cookiecutter.project_slug }}/">
     <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_slug }}">
   </a>
@@ -20,9 +20,8 @@
   <a alt="Codecov" href="https://app.codecov.io/gh/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}">
     <img src="https://img.shields.io/codecov/c/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}" />
   </a>
-</p>
+</p> -->
 
-{{ cookiecutter.project_short_description }}
 
 <!-- PYPI-DOCS:START -->
 
@@ -42,12 +41,21 @@ import {{ cookiecutter.project_slug }}
 
 # Features
 
+- feature A
+- feature B
+
 # Installation
 
-You can install {{ cookiecutter.project_name }} with pip.
+<!-- You can install {{ cookiecutter.project_name }} with pip.
 
 ```python
-$ pip install
+$ pip install {{ cookiecutter.project_slug }}
+``` -->
+
+Alternatively, you can download and install `{{ cookiecutter.project_slug }}` from github:
+
+```python
+$ pip install git+https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
 ```
 
 # How to use {{ cookiecutter.project_slug }}
