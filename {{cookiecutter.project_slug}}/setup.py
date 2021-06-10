@@ -40,7 +40,7 @@ setup(
     url='https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}',
     description="{{ cookiecutter.project_short_description }}",
     long_description=pathlib.Path(
-        "pypi_description.md").read_text(encoding="utf-8"),
+        "pypidocs.md").read_text(encoding="utf-8"),
     long_description_content_type='text/markdown',
     project_urls={
         'Documentation': 'https://{{ cookiecutter.project_slug }}.readthedocs.io/en/latest/',
