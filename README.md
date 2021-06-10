@@ -5,11 +5,11 @@
 
 What makes this template different than other PyPackage templates? All commands used for development are stored within a `Makefile`! This increases automation and new contributors will know immediately about the development workflow.
 
-Local testing/linting is controlled `by pre-commit` and a `Makefile`
+Local testing/linting is controlled by `pre-commit` and a `Makefile`
 - Testing: pytest, coverage (tox)
 - Linting: flake8
 
-Local release (packaging/documentation) is controlled by a `Makefile`
+Local release (packaging/documentation) is also controlled by `Makefile`
 - Docs: sphinx, readthedocs (rtd theme)
 - Release: PyPI, twine, wheel
 
